@@ -28,7 +28,7 @@
 
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import { DynamicBorder } from "@earendil-works/pi-coding-agent";
-import { Container, type SelectItem, SelectList, Text, matchesKey, Key } from "@earendil-works/pi-tui";
+import { Container, type SelectItem, SelectList, Text, matchesKey, Key, visibleWidth, truncateToWidth } from "@earendil-works/pi-tui";
 import { Type } from "typebox";
 
 // ─── 故事与关卡数据 ───────────────────────────────────
@@ -1856,6 +1856,12 @@ export default function (pi: ExtensionAPI) {
             const level = LEVELS[gameState.currentLevel];
             const pad = 2;
 
+            // Helper: truncate a themed string to fit within visible width
+            function fit(text: string, maxWidth: number = width - pad): string {
+              if (visibleWidth(text) <= maxWidth) return text;
+              return truncateToWidth(text, maxWidth, "…");
+            }
+
             switch (screen) {
               case "menu": {
                 // 标题
@@ -2023,7 +2029,8 @@ export default function (pi: ExtensionAPI) {
                 break;
               }
             }
-            return lines;
+            // Ensure no line exceeds terminal width
+            return lines.map(line => truncateToWidth(line, width));
           }
 
           function handleInput(data: string) {
