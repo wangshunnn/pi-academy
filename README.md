@@ -1,5 +1,7 @@
 # 🏰 Pi Academy — 终端闯关游戏
 
+<p align="center"><img src="screenshot.jpeg" alt="Pi Academy 截图" width="600" /></p>
+
 在 Pi Coding Agent 里通过闯关学习 Pi 框架核心概念。
 
 ## 安装
