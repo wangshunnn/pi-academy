@@ -1,10 +1,41 @@
 {
   "name": "pi-academy",
   "version": "1.0.0",
-  "description": "🏰 Pi Academy — 终端闯关游戏，学习 Pi 框架核心概念",
-  "keywords": ["pi-package", "pi-academy", "pi-extension", "learning", "game"],
+  "description": "🏰 Pi Academy — 终端闯关游戏，在 Pi Coding Agent 中边玩边学 Pi 框架核心概念",
+  "type": "module",
+  "main": "./extensions/index.ts",
+  "keywords": [
+    "pi-package",
+    "pi-academy",
+    "pi-extension",
+    "learning",
+    "game",
+    "tutorial",
+    "terminal",
+    "coding-agent",
+    "interactive"
+  ],
   "license": "MIT",
-  "author": "",
+  "author": {
+    "name": "Soon Wang",
+    "url": "https://github.com/wangshunnn"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wangshunnn/pi-academy"
+  },
+  "bugs": {
+    "url": "https://github.com/wangshunnn/pi-academy/issues"
+  },
+  "homepage": "https://github.com/wangshunnn/pi-academy#readme",
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "extensions",
+    "README.md",
+    "screenshot.jpeg"
+  ],
   "pi": {
     "extensions": ["./extensions"]
   },

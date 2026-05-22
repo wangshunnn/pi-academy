@@ -1,13 +1,34 @@
 # 🏰 Pi Academy — 终端闯关游戏
 
-<p align="center"><img src="screenshot.jpeg" alt="Pi Academy 截图" width="600" /></p>
+<p align="center">
+  <img src="screenshot.jpeg" alt="Pi Academy 截图" width="600" />
+</p>
 
-在 Pi Coding Agent 里通过闯关学习 Pi 框架核心概念。
+<p align="center">
+  <a href="https://github.com/wangshunnn/pi-academy/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License" /></a>
+  <a href="https://github.com/wangshunnn/pi-academy"><img src="https://img.shields.io/badge/pi--package-available-brightgreen.svg" alt="Pi Package" /></a>
+  <img src="https://img.shields.io/badge/node-%3E%3D18-green.svg" alt="Node" />
+</p>
+
+在 [Pi Coding Agent](https://github.com/earendil-works/pi-coding-agent) 里通过闯关学习 Pi 框架核心概念。
+
+15 个关卡 + 2 个 Boss 战，从 API 使用到源码架构，逐步深入。
+
+## 前置要求
+
+- **Node.js** >= 18
+- **[Pi Coding Agent](https://github.com/earendil-works/pi-coding-agent)** 已安装并配置好
 
 ## 安装
 
 ```bash
-pi install git:github.com/YOUR_USERNAME/pi-academy
+pi install git:github.com/wangshunnn/pi-academy
+```
+
+## 卸载
+
+```bash
+pi uninstall pi-academy
 ```
 
 ## 关卡
@@ -51,8 +72,8 @@ pi install git:github.com/YOUR_USERNAME/pi-academy
 
 建议先通基础之路（Lv.0-8），再挑战进阶熔炉（Lv.9-Boss2）。
 
-基础之路教你 **怎么用** — API 的使用方法。
-进阶熔炉教你 **为什么这样设计** — 背后的架构思想与算法。
+- **基础之路**教你 **怎么用** — API 的使用方法
+- **进阶熔炉**教你 **为什么这样设计** — 背后的架构思想与算法
 
 ## 学习进度
 
@@ -62,6 +83,24 @@ pi install git:github.com/YOUR_USERNAME/pi-academy
 
 > 查看我的 academy 学习进度
 
+## 本地开发
+
+```bash
+# 克隆仓库
+git clone https://github.com/wangshunnn/pi-academy.git
+cd pi-academy
+
+# 本地加载 Extension（开发调试）
+pi -e ./extensions/index.ts
+```
+
+## 贡献
+
+欢迎提交 Issue 和 Pull Request！
+
+- [Issue Tracker](https://github.com/wangshunnn/pi-academy/issues)
+- [Pull Requests](https://github.com/wangshunnn/pi-academy/pulls)
+
 ## License
 
-MIT
+[MIT](LICENSE) © [Soon Wang](https://github.com/wangshunnn)
